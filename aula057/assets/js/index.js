@@ -1,7 +1,7 @@
 function criaCalculadora() {
     return {
         // Atributos
-        display: document.querySelector('.display'),
+        display: document.querySelector('.display'), // público
 
 
         // Métodos
