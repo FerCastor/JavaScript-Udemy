@@ -26,32 +26,32 @@ console.log(p1);
 
 
 class Caneta {
-    constructor(cor, estado) {
+    constructor(cor) {
         this.cor = cor;
-        this.estado = estado;
+        this.tampado = true;
     }
 
     tampar() {
-        if (this.estado !== 'tampado') {
-            console.log('Tampei');
-        } else {
+        if (this.tampado) {
             console.log('Já estou tampado!')
-        }
-        return this.estado = 'tampado';
-    }
+        } else {
+        console.log('Tampei');
+        this.tampado = true;
+    }}
     
     destampar() {
-        if (this.estado !== 'destampado') {
-            console.log('Destampado!');
-        } else {
+        if (!this.tampado) {
             console.log('Já estou destampado!');
-        }
-        return this.estado = 'destampado';
-    }
+        } else { 
+        console.log('Destampado!');
+        this.tampado = false;
+    }}
 }
 
 
-const caneta = new Caneta('Azul', 'destampado');
+const caneta = new Caneta('Azul');
 console.log(caneta);
 caneta.tampar();
 caneta.destampar();
+caneta.destampar();
+caneta.tampar();
