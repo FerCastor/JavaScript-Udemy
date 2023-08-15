@@ -7,11 +7,11 @@ function Produto(nome, preco) {
 }
 
 Produto.prototype.desconto = function(percentual) {
-    this.preco = this.preco - (this.preco * (percentual/100));
+    this.preco -= (this.preco * (percentual/100));
 };
 
 Produto.prototype.aumento = function(percentual) {
-    this.preco = this.preco + (this.preco * (percentual/100));
+    this.preco += this.preco * (percentual/100);
 };
 
 /* 
@@ -32,7 +32,7 @@ const p3 = Object.create(Produto.prototype, {
         writable: true,
         configurable: true,
         enumerable: true,
-        value: 50
+        value: 100
     },
     tamanho: {
         writable: true,
