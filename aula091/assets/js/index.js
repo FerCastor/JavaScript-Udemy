@@ -31,3 +31,4 @@ function carregaElementosNaPagina(json) {
     const resultado = document.querySelector('.resultado');
     resultado.appendChild(table);
 }
+
