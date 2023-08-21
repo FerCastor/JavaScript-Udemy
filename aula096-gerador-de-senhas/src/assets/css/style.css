@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --cor-primaria: rgb(17, 86, 102);
+    --cor-primaria-dark: rgb(9, 48, 56);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--cor-primaria);
+}
+
+#qtd-caracteres {
+    width: 70px;
+    height: 25px;
+}
+
+.btn-enviar {
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.42);
+}
+
+.btn-enviar:hover {
+    cursor: pointer;
+    background-color: var(--cor-primaria-dark);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 7px rgb(0, 0, 0), 0.75;
+}
