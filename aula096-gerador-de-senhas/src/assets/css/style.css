@@ -2,7 +2,7 @@
 
 :root {
     --cor-primaria: rgb(17, 86, 102);
-    --cor-primaria-dark: rgb(9, 48, 56);
+    --cor-primaria-dark: rgb(2, 15, 17);
 }
 
 * {
@@ -16,7 +16,7 @@ body {
     background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
         linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
         linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
@@ -74,8 +74,10 @@ button {
 
 .gerar-senha {
     padding: 10px;
-    background-color: var(--cor-primaria);
-    color: white;
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    color: black;
     font-weight: 600;
     font-size: 1rem;
     border: none;
