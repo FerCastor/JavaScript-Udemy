@@ -11,28 +11,23 @@
 
     <section class="container">
         <h1>Gerador de Senhas</h1>
-        <h2 class="resultado">Selecione as opções</h2>
-        <p>
-            <label for="qtd-caracteres"> Quantidade de caracteres</label>
-            <input type="number" min="8" max="50" id="qtd-caracteres">
+        <h2 class="senha-gerada">Selecione as opções</h2>
+        <p>Quantidade de caracteres
+            <input type="number" min="8" max="50" value="8" name="qtd-caracteres" class="qtd-caracteres">
         </p>
-        <p>
-            <label for="add-numeros">Adicionar números</label>
-            <input type="checkbox" name="add-numeros" id="add-numeros" class="checkbox" checked>
+        <p>Adicionar números
+            <input type="checkbox" name="chk-numeros" class="chk-numeros" checked>
         </p>
-        <p>
-            <label for="letra-upper">Letras maiúsculas</label>
-            <input type="checkbox" name="letra-upper" id="letra-upper" class="checkbox">
+        <p>Letras maiúsculas
+            <input type="checkbox" name="chk-maiusculas" class="chk-maiusculas">
         </p>
-        <p>
-            <label for="letra-upper">Letras minúsculas</label>
-            <input type="checkbox" name="letra-lower" id="letra-lower" class="checkbox">
+        <p>Letras minúsculas
+            <input type="checkbox" name="chk-minusculas" class="chk-minusculas">
         </p>
-        <p>
-            <label for="simbolos">Caracteres especiais</label>
-            <input type="checkbox" name="simbolos" id="simbolos" class="checkbox">
+        <p>Caracteres especiais
+            <input type="checkbox" name="chk-simbolos" class="chk-simbolos">
         </p>
-        <input type="submit" value="Gerar senha" class="btn-enviar">
+        <button class="gerar-senha">Gerar senha</button>
 
     </section>
 
