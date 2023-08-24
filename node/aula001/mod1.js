@@ -1,7 +1,26 @@
 // Módulos
+class Pessoa {
+	constructor(nome) {
+		this.nome = nome;
+	}
+}
+
+const nome = 'Fer'
+const sobrenome = 'Oliveira';
+
+// Abaixo não funciona sem a palavra module, somente se for a declaração normal, sem ser com chaves, quando existente, sobrescreve outros exports
+module.exports = {
+    nome, sobrenome, Pessoa
+}
 
 
-const nome = 'Fernanda';
+
+
+/* module.exports.nome = 'Fer';
+exports.Pessoa = Pessoa;
+this.sobrenome = 'Teste'; */
+
+/* const nome = 'Fernanda';
 const sobrenome = 'Castor';
 
 const apresentacao = () => nome + ' ' + sobrenome;
@@ -11,7 +30,7 @@ const apresentacao = () => nome + ' ' + sobrenome;
 exports.nome = nome;
 exports.sobrenome = sobrenome;
 exports.apresentacao = apresentacao;
-this.teste = 'Teste feito'; // This nesse caso se refere ao módulo, sendo assim, essa linha cria uma exportação no modulo que recebe a string.
+this.teste = 'Teste feito'; // This nesse caso se refere ao módulo, sendo assim, essa linha cria uma exportação no modulo que recebe a string. */
 
 /*
 Também é possível exportar assim:
@@ -20,4 +39,3 @@ module.exports.nome = nome; // Exporta para o módulo a variável declarada
 module.exports.sobrenome = sobrenome; // Exporta para o módulo a variável declarada
 module.exports.apresentacao = apresentacao; // Exporta para o módulo a variável
 */
-
