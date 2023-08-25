@@ -1,0 +1,15 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+var div = document.createElement("div");
+var h1 = document.createElement("h1");
+var textnode = document.createTextNode("Olá, Mundo!");
+div.appendChild(h1);
+h1.appendChild(textnode);
+document.getElementById('container').appendChild(div);
+console.log('Olá!');
+/******/ })()
+;
+//# sourceMappingURL=bundle.js.map

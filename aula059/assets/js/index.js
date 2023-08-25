@@ -1,12 +1,13 @@
-function Calculadora() {
+function Calculator() {
     // Atributos
     this.display = document.querySelector('.display'), // público
 
         // Métodos
-
+        // Inicia a calculadora
         this.inicia = () => {
             this.capturaCliques();
             this.capturaEnter();
+            this.capturaEsc();
         };
 
         // Captura onde foi clicado
@@ -29,21 +30,16 @@ function Calculadora() {
             }
         )};
 
-        
-
         // Exibe o valor do botão no display
-        this.addNumDisplay = elemento => {
-            this.display.value += elemento.innerText;
-        }
+        this.addNumDisplay = elemento => this.display.value += elemento.innerText;
 
-        this.clear = () => {
-            this.display.value = ''
-        }
+        // Limpa o display
+        this.clear = () => this.display.value = '';
 
-        this.del = () => {
-            this.display.value = this.display.value.slice(0, -1)
-        }
+        // Remove o último valor que foi inserido
+        this.del = () => this.display.value = this.display.value.slice(0, -1);
 
+        // Retorna o resultado da conta
         this.realizaConta = () => {
             try {
                 const conta = eval(this.display.value);
@@ -58,8 +54,9 @@ function Calculadora() {
                 alert('Conta inválida');
                 return;
             }
-        }
+        };
 
+        // Verifica quando o Enter é apertado e realiza a conta quando pressionado
         this.capturaEnter = () => {
             document.addEventListener('keydown', e => {
                 if (e.key === 'Enter') {
@@ -67,11 +64,27 @@ function Calculadora() {
                     this.realizaConta();
                 }
             });
+        };
+        
+        this.capturaEsc = () => {
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    e.preventDefault();
+                    this.clear();
+                }
+            })
         }
 
-
+        this.capturaBackspace = () => {
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Backspace') {
+                    e.preventDefault();
+                    this.del();
+                }
+            })
+        }
 };
 
 
-const calculadora = new Calculadora();
-calculadora.inicia();
+const calculator = new Calculator();
+calculator.inicia();
