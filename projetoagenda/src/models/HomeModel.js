@@ -11,8 +11,8 @@ const HomeModel = mongoose.model('Home', HomeSchema);
 module.exports = HomeModel;
 
 
-// class Home {
+class Home {
     
-// }
+}
 
-// module.exports = Home;
+module.exports = Home;

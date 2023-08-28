@@ -14,19 +14,32 @@ mongoose
 	})
 	.catch((e) => console.log(e));
 const session = require("express-session"); // Identificar o navegador do cliente (salvar cookie no navegador do cliente)
-const MongoStore = require("connect-mongo"); // Para falar que as sessões serão salvas no BD 
+const MongoStore = require("connect-mongo"); // Para falar que as sessões serão salvas no BD
 const flash = require("connect-flash"); // Mensagens auto-destrutivas (perfeito para exibir mensagens de erro ou feedback ao usuário) [sem session essas mensagens não funcionam]
 const routes = require("./routes"); // Rotas da aplicação
 const path = require("path"); // Trabalhar com caminhos
-const helmet = require('helmet'); // Deixa a aplicação mais segura ajustando o cabeçalho
-const csrf = require('csurf'); // Tokens que são gerados para o envio dos formulário, impedindo invasões pelo form
-const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require("./src/middlewares/middleware"); // Funções que são executadas na rota
+const helmet = require("helmet"); // Deixa a aplicação mais segura ajustando o cabeçalho
+const csrf = require("csurf"); // Tokens que são gerados para o envio dos formulário, impedindo invasões pelo form
+const {
+	middlewareGlobal,
+	checkCsrfError,
+	csrfMiddleware,
+} = require("./src/middlewares/middleware"); // Funções que são executadas na rota
 
-app.use(helmet()); // 
+app.use(helmet()); //
+
+// Script inserido por conta
+app.use(function (req, res, next) {
+	res.setHeader(
+		"Content-Security-Policy",
+		"script-src 'self' https://cdn.jsdelivr.net;"
+	);
+	next();
+});
 
 // Trata o dado enviado na requisição para que seja exibido corretamente
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json()) 
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "public"))); // Para os arquivos estáticos e que podem ser acessados diretamente
 
 // Configuração da sessão
