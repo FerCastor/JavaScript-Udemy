@@ -66,7 +66,7 @@ class Login {
 		}
 
 		// A senha tem que ter entre 6 e 20 caracteres
-		if (this.body.password.length < 8 || this.body.password.length > 20) {
+		if (this.body.password.length < 6 || this.body.password.length > 20) {
 			this.errors.push("A senha deve ter entre 8 e 20 caracteres.");
 		}
 	}

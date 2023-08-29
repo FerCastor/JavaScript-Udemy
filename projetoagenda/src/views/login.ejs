@@ -55,7 +55,7 @@
 					<form class="form-login" action="/login/login" method="POST">
 						<!-- Atualize a ação do formulário para a rota de login -->
 						<input type="hidden" name="_csrf" value="<%= csrfToken %>">
-						<div class="mb-3">
+						<div class="mb-3 div-email">
 							<label>Email</label>
 							<input
 								type="email"
@@ -65,7 +65,7 @@
 							/>
 						</div>
 
-						<div class="mb-3">
+						<div class="mb-3 div-password">
 							<label>Senha</label>
 							<input
 								type="password"
