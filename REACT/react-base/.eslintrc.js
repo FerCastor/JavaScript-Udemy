@@ -33,7 +33,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
-    'no-console': 'warn',
+    // 'no-console': 'warn',
     'comma-dangle': ['error', 'always-multiline'],
     'react/react-in-jsx-scope': 0,
     'import/no-extraneous-dependencies': 0,
